@@ -22,10 +22,10 @@ jobs:
     - name: Setup signing configure
       run: |
         echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 -d > release.keystore ;
-        echo "signingStoreLocation=../release.keystore" > signing.properties ;
-        echo "signingStorePassword=${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" >> signing.properties ;
-        echo "signingKeyAlias=release" >> signing.properties ;
-        echo "signingKeyPassword=${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" >> signing.properties ;
+        echo "signingStoreLocation=../release.keystore" > keystore.properties ;
+        echo "signingStorePassword=${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" >> keystore.properties ;
+        echo "signingKeyAlias=release" >> keystore.properties ;
+        echo "signingKeyPassword=${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" >> keystore.properties ;
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
