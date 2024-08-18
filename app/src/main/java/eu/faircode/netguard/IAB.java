@@ -1,4 +1,4 @@
- package eu.faircode.netguard;
+package eu.faircode.netguard;
 
 /*
     This file is part of NetGuard.
