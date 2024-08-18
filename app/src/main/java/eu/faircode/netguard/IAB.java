@@ -88,7 +88,7 @@ public class IAB implements ServiceConnection {
 
     public boolean isAvailable(String sku) throws RemoteException, JSONException {
         // Get available SKUs
-        ArrayList<String> skuList = new ArrayList<>();
+        // ArrayList<String> skuList = new ArrayList<>();
         // skuList.add(sku);
         // Bundle query = new Bundle();
         // query.putStringArrayList("ITEM_ID_LIST", skuList);
@@ -113,7 +113,7 @@ public class IAB implements ServiceConnection {
         //     }
         // Log.i(TAG, sku + "=" + found);
 
-        return found;
+        return false;
     }
 
     public void updatePurchases() throws RemoteException {
